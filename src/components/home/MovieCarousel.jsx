@@ -3,7 +3,6 @@ import arrowLeftIcon from '../../assets/images/icons/arrow-left.png';
 import arrowRightIcon from '../../assets/images/icons/arrow-right.png';
 import heartIcon from '../../assets/images/icons/heart.png';
 import heartFilledIcon from '../../assets/images/icons/heart-filled.png';
-import infoIcon from '../../assets/images/icons/information-outline.png';
 import ShareMovieModal from './ShareMovieModal';
 
 const MovieCarousel = ({ title, type = 'landscape', movies }) => {

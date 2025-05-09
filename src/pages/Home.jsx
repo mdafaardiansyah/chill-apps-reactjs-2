@@ -10,12 +10,12 @@ import { continueWatchingMovies, topRatingMovies, trendingMovies } from '../data
 
 const Home = () => {
   // State untuk mengelola film yang sedang ditonton
-  const [watchingMovies, setWatchingMovies] = useState(continueWatchingMovies);
+  const [watchingMovies] = useState(continueWatchingMovies);
   
-  // Fungsi untuk menghapus film dari daftar sedang ditonton
-  const removeFromWatching = (movieTitle) => {
-    setWatchingMovies(watchingMovies.filter(movie => movie.title !== movieTitle));
-  };
+  // Fungsi untuk menghapus film akan diimplementasikan nanti
+  // const removeFromWatching = (movieTitle) => {
+  //   setWatchingMovies(watchingMovies.filter(movie => movie.title !== movieTitle));
+  // };
 
   return (
     <div className="home-page">

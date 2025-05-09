@@ -1,20 +1,19 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useState } from 'react';
+import { useAuth as useAuthHook } from './authUtils';
 
 // Membuat context untuk autentikasi
 const AuthContext = createContext();
 
-// Custom hook untuk menggunakan AuthContext
-export const useAuth = () => {
-  return useContext(AuthContext);
-};
+// Export custom hook untuk menggunakan AuthContext
+export const useAuth = () => useAuthHook(AuthContext);
 
 // Provider component untuk AuthContext
 export const AuthProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [loading] = useState(true);
 
   // Fungsi untuk login
-  const login = (username, password) => {
+  const login = (username) => {
     // Implementasi login sebenarnya akan ditambahkan nanti
     // Untuk saat ini, hanya simulasi login berhasil
     setCurrentUser({ username });
@@ -29,7 +28,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   // Fungsi untuk register
-  const register = (username, password) => {
+  const register = (username) => {
     // Implementasi register sebenarnya akan ditambahkan nanti
     setCurrentUser({ username });
     return Promise.resolve();
