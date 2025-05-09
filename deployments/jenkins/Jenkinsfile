@@ -96,7 +96,7 @@ pipeline {
                             ssh -o StrictHostKeyChecking=no -i "$SSH_KEY" $SERVER_USER@$SERVER_IP "if [ -d /var/www/chill-movie-apps-2/.git ]; then \
                               cd /var/www/chill-movie-apps-2 && git pull; \
                             else \
-                              git clone https://github.com/mdafaardiansyah/chill-apps-reactjs-1.git /var/www/chill-movie-apps-2; \
+                              git clone https://github.com/mdafaardiansyah/chill-apps-reactjs-2.git /var/www/chill-movie-apps-2; \
                             fi"
                             
                             # Copy configuration files
