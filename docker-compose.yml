@@ -6,7 +6,7 @@ services:
     container_name: chill-movie-app-2
     restart: unless-stopped
     ports:
-      - "3002:80"  # Menghindari konflik dengan Nginx di host yang menggunakan port 80
+      - "3003:80"  # Menghindari konflik dengan Nginx di host yang menggunakan port 80
     networks:
       - web
     environment:
